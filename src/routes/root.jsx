@@ -17,16 +17,24 @@ export default function Root() {
 
     return (
         <>
-            <h1>Category List</h1>
-            <ul>
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap');
+        </style>
+
+            <div className="topPart">
+                <h1>fake store</h1>
+                <p className="sub" ><i>none of this is real.</i></p>
+            </div>
+
+            <div className="categoryList">
                 {categoryList.map(category => {
-                    return (<li key={category}>
-                        <Link to={`/${category}`}>
+                    return (<p className="sectionLinks" key={category}>
+                        <Link className="categoryLinks" to={`/${category}`}>
                             {category}
                         </Link>
-                    </li>)
+                    </p>)
                 })}
-            </ul>
+            </div>
             <Outlet />
         </>
     )

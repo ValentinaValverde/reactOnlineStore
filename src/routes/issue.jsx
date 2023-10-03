@@ -7,7 +7,7 @@ export default function Issue() {
         <div className="errorPage">
             <h1> whomp whomp </h1>
             <p>there's been an error</p>
-            <Link to="/">go home</Link>
+            <Link className="refreshLink" to="/">go home</Link>
         </div>
         </>
     )

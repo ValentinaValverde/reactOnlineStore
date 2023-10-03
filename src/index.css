@@ -10,9 +10,10 @@
 body {
   margin: 0;
   display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: 100px;
 }
 
 h1 {
@@ -20,3 +21,4 @@ h1 {
   line-height: 1.1;
   text-align: center;
 }
+

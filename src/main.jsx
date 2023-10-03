@@ -2,13 +2,18 @@ import React from 'react'
 import ReactDOM from 'react-dom/client'
 import { 
   createBrowserRouter, 
-  RouterProvider 
+  RouterProvider ,
 } from 'react-router-dom'
 import Root, {
   loader as rootLoader,
 } from './routes/root'
 import Issue from './routes/issue'
 import './index.css'
+import Electronics from "./routes/electronics"
+import Jewelery from "./routes/jewelery"
+import Mens from "./routes/mens"
+import Womens from "./routes/womens"
+
 
 
 const router = createBrowserRouter([
@@ -16,10 +21,24 @@ const router = createBrowserRouter([
     path: '/',
     element: <Root />,
     loader: rootLoader,
+    errorElement: <Issue />,
+    // whatever is inside the children array is what's loaded in the <Outlet />
     children: [
       {
-        path: 'issue/:issueId',
-        element: <Issue />
+        path: '/electronics',
+        element: <Electronics />
+      },
+      {
+        path: '/jewelery',
+        element: <Jewelery />
+      },
+      {
+        path: '/mens',
+        element: <Mens />
+      },
+      {
+        path: '/womens',
+        element: <Womens />
       }
     ]
   }

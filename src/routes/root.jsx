@@ -27,6 +27,7 @@ export default function Root() {
                     </li>)
                 })}
             </ul>
+            <Outlet />
         </>
     )
 }
